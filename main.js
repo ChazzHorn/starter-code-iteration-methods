@@ -28,41 +28,27 @@ const activeUser = users.filter(function(user){
 })
 printKata(1, activeUser)
 
-const userEmail = users.map(function(user){
-    return user.email
-})
+const userEmail = users.map(user => user.email)
 printKata(2, userEmail)
 
-const hasOvation = users.some(function(user){
-    return user.company === 'OVATION'
-})
+const hasOvation = users.some(user => user.company === 'OVATION')
 printKata(3, hasOvation)
 
-const over38 = users.find(function(user){
-    return user.age > 38
-})
+const over38 = users.find(user => user.age > 38)
 printKata(4, over38)
 
-const over38AndActive = activeUser.find(function(user){
-    return user.age > 38
-})
+const over38AndActive = activeUser.find(user => user.age > 38)
 printKata(5, over38AndActive)
 
-const zencoUsers = users.filter(function(user){
-    return user.company === 'ZENCO'
-})
-const zencoUserBalance = zencoUsers.map(function(user){
-    return user.balance 
-})
+const zencoUsers = users.filter(user =>user.company === 'ZENCO')
+const zencoUserBalance = zencoUsers.map(user => user.balance)
 printKata(6, zencoUserBalance)
 
 
-const fugiatTagUsers = users.filter(function(user){
+const fugiatTagUsers = users.filter(user =>{
     if (user.tags.includes('fugiat')){
     return user.tags 
     }
 })
-const ageOfFugiatTagUsers = fugiatTagUsers.map(function(user){
-    return user.age 
-})
+const ageOfFugiatTagUsers = fugiatTagUsers.map(user => user.age)
 printKata(7, ageOfFugiatTagUsers)
